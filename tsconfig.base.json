@@ -1,0 +1,41 @@
+{
+    "compilerOptions": {
+      "allowJs": false,
+      "allowSyntheticDefaultImports": true,
+      "allowUnreachableCode": false,
+      "alwaysStrict": true,
+      "declaration": true,
+      "downlevelIteration": true,
+      "emitDecoratorMetadata": false, // https://lit.dev/docs/components/decorators/#decorators-typescript
+      "esModuleInterop": true,
+      "exactOptionalPropertyTypes": true,
+      "experimentalDecorators": true,
+      "forceConsistentCasingInFileNames": true,
+      "verbatimModuleSyntax": true,
+      "isolatedModules": true,
+      "lib": [
+        "ES2022",
+        "DOM",
+      ],
+      "module": "ES2022",
+      "moduleResolution": "node",
+      "newLine": "lf",
+      "noErrorTruncation": false,
+      "noFallthroughCasesInSwitch": true,
+      "noImplicitAny": true,
+      "noImplicitOverride": true,
+      "noImplicitReturns": true,
+      "noImplicitThis": true,
+      "noPropertyAccessFromIndexSignature": true,
+      "noUncheckedIndexedAccess": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "removeComments": false, // In particular, we want TSDoc/JSDoc for exported definitions to be preserved.
+      "resolveJsonModule": true,
+      "strict": true,
+      "target": "ES2022",
+      "types": [],
+      "useDefineForClassFields": false, // https://lit.dev/docs/components/decorators/#decorators-typescript
+      "useUnknownInCatchVariables": true,
+    },
+  }
