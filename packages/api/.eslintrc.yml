@@ -1,0 +1,6 @@
+extends: ../../.eslintrc.base.yml
+parserOptions:
+  project:
+    - tsconfig.json
+ignorePatterns:
+  - dist
