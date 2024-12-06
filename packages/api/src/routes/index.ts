@@ -1,8 +1,8 @@
 import { Router } from "express";
 
-import { helloWorld } from "../controllers";
+import { getAllPokemon } from "../controllers/index.js";
 
 const router = Router();
-router.get("/", helloWorld);
+router.get("/pokemon", getAllPokemon);
 
 export default router;
