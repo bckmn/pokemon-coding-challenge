@@ -32,6 +32,7 @@ If you want to propose changes to this repository, please create a Pull Request 
 
 A list of things I would like to improve:
 
+  - Add proper error handling of the `/battle` endpoint. Errors should return proper HTTP error codes instead of being added to the battle log.
   - Add a simple GUI for creating your team and picking Pokemon.
   - Use `tiny-decoders` to decode the data sent to the API.
   - Setup separate, stateless endpoints and let the client store the state of the battle.
