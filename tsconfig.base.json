@@ -32,7 +32,7 @@
       "resolveJsonModule": true,
       "strict": true,
       "target": "ES2022",
-      "types": [ "jest", "node" ],
+      "types": [ "mocha", "node" ],
       "useUnknownInCatchVariables": true,
     },
   }
