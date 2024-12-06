@@ -6,7 +6,6 @@
       "alwaysStrict": true,
       "declaration": true,
       "downlevelIteration": true,
-      "emitDecoratorMetadata": false, // https://lit.dev/docs/components/decorators/#decorators-typescript
       "esModuleInterop": true,
       "exactOptionalPropertyTypes": true,
       "experimentalDecorators": true,
@@ -34,7 +33,6 @@
       "strict": true,
       "target": "ES2022",
       "types": [ "jest", "node" ],
-      "useDefineForClassFields": false, // https://lit.dev/docs/components/decorators/#decorators-typescript
       "useUnknownInCatchVariables": true,
     },
   }
