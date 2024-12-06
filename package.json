@@ -4,6 +4,7 @@
   "scripts": {
     "build": "npm run build --workspaces",
     "start": "npm run start --workspace=api",
+    "dev": "npm run dev --workspaces",
     "lint": "npm run lint --workspaces",
     "lint:fix": "npm run lint:fix --workspaces"
   },
@@ -15,6 +16,7 @@
     "eslint": "^8.49.0",
     "eslint-plugin-import": "^2.31.0",
     "rimraf": "^6.0.1",
+    "tsx": "^4.19.2",
     "typescript": "5.3"
   }
 }
