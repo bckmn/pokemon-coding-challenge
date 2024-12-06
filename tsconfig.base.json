@@ -11,7 +11,6 @@
       "exactOptionalPropertyTypes": true,
       "experimentalDecorators": true,
       "forceConsistentCasingInFileNames": true,
-      "verbatimModuleSyntax": true,
       "isolatedModules": true,
       "lib": [
         "ES2022",
@@ -34,7 +33,7 @@
       "resolveJsonModule": true,
       "strict": true,
       "target": "ES2022",
-      "types": [],
+      "types": [ "jest", "node" ],
       "useDefineForClassFields": false, // https://lit.dev/docs/components/decorators/#decorators-typescript
       "useUnknownInCatchVariables": true,
     },
