@@ -1,61 +1,29 @@
 import { type Request, type Response } from "express";
+import { fields, format, Infer } from "tiny-decoders";
 
-import { type Team, type BattleResult } from "../types/battle.js";
+import { BattleResult, teamCodec } from "../types/battle.js";
 import { simulateBattle } from "../utils/battle-mechanics.js";
 
+const battleCodec = fields({
+  team1: teamCodec,
+  team2: teamCodec,
+});
+
+type PokemonBattle = Infer<typeof battleCodec>;
+
 export function simulatePokemonBattle(
-  req: Request<{ team1: Team; team2: Team }>,
+  req: Request<PokemonBattle>,
   res: Response<BattleResult | { errorMessage: string }>,
 ) {
-  const { team1, team2 } = req.body;
-
-  if (team1 === undefined) {
+  const maybeTeams = battleCodec.decoder(req.body);
+  if (maybeTeams.tag === "DecoderError") {
     res.status(400).json({
-      errorMessage: "Team 1 not provided",
-    });
-    return;
-  }
-  
-  if (team2 === undefined) {
-    res.status(400).json({
-      errorMessage: "Team 2 not provided",
-    });
-    return;
-  }
-  
-  
-  if (team1.pokemon === undefined) {
-    res.status(400).json({
-      errorMessage: "No pokemon provided for Team 1",
-    });
-    return;
-  }
-  
-  
-  if (team2.pokemon === undefined) {
-    res.status(400).json({
-      errorMessage: "No pokemon provided for Team 2",
-    });
-    return;
-  }
-  
-  
-  if (team1.trainer === undefined) {
-    res.status(400).json({
-      errorMessage: "No trainer provided for Team 1",
-    });
-    return;
-  }
-  
-  
-  if (team2.trainer === undefined) {
-    res.status(400).json({
-      errorMessage: "No trainer provided for Team 2",
+      errorMessage: format(maybeTeams.error),
     });
     return;
   }
 
-  const result = simulateBattle(team1, team2);
+  const result = simulateBattle(maybeTeams.value.team1, maybeTeams.value.team2);
   
   res.json(result);
 }
