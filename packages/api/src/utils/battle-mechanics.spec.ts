@@ -3,6 +3,7 @@ import { expect } from "chai";
 import { Team } from "../types/battle";
 
 import { simulateBattle } from "./battle-mechanics";
+import { PokemonName } from "../assets/pokemon";
 
 
 describe("Battle Mechanics", () => {
@@ -44,7 +45,7 @@ describe("Battle Mechanics", () => {
     it("should throw an error when invalid Pokemon names are provided", () => {
       const team1: Team = {
         trainer: "Ash",
-        pokemon: ["NonexistentPokemon"],
+        pokemon: ["NonexistentPokemon" as PokemonName],
       };
   
       const team2: Team = {

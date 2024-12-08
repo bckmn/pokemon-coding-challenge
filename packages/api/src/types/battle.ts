@@ -1,9 +1,10 @@
 import { array, fields, Infer, string } from "tiny-decoders";
+import { pokemonNameCodec } from "../assets/pokemon";
 
 export const teamCodec = fields({
-    trainer: string,
-    pokemon: array(string),
-  });
+  trainer: string,
+  pokemon: array(pokemonNameCodec),
+});
 
 export type Team = Infer<typeof teamCodec>;
 
