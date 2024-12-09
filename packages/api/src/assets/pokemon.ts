@@ -156,10 +156,10 @@ const pokemonNames = [
   "Dragonair",
   "Dragonite",
   "Mewtwo",
-  "Mew"
+  "Mew",
 ] as const;
 
-export const pokemonNameCodec = primitiveUnion(pokemonNames)
+export const pokemonNameCodec = primitiveUnion(pokemonNames);
 
 export type PokemonName = Infer<typeof pokemonNameCodec>;
 
