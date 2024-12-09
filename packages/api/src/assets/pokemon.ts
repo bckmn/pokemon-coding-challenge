@@ -1,4 +1,4 @@
-import { Codec, Infer, primitiveUnion } from "tiny-decoders";
+import { Infer, primitiveUnion } from "tiny-decoders";
 
 type Evolution = {
   num: string;
