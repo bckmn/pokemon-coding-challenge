@@ -16,6 +16,27 @@ npm ci
 npm run dev
 ```
 
+Visit `http://localhost:{PORT}/api-docs` to interact with the API via an OpenAPI UI.
+
+### Example request
+
+The `POST /battle` endpoint requires the user to send a request with the following structure:
+
+```
+{
+  "team1": {
+		"trainer": "Ash",
+    "pokemon": ["Blastoise", "Ivysaur"]
+  },
+  "team2": {
+    "trainer": "Gary",
+    "pokemon": ["Charmander", "Charmeleon"]
+  }
+}
+```
+
+Trainer can be any `string`, but the members of the `pokemon` array have to be names from the response of the `GET /pokemon` endpoint.
+
 To run all checks:
 
 ```
