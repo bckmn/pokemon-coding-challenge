@@ -18,6 +18,14 @@ npm run dev
 
 Visit `http://localhost:{PORT}/api-docs` to interact with the API via an OpenAPI UI.
 
+To run all checks:
+
+```
+npm run build
+npm run lint
+npm run test
+```
+
 ### Example request
 
 The `POST /battle` endpoint requires the user to send a request with the following structure:
@@ -25,7 +33,7 @@ The `POST /battle` endpoint requires the user to send a request with the followi
 ```
 {
   "team1": {
-		"trainer": "Ash",
+    "trainer": "Ash",
     "pokemon": ["Blastoise", "Ivysaur"]
   },
   "team2": {
@@ -36,14 +44,6 @@ The `POST /battle` endpoint requires the user to send a request with the followi
 ```
 
 Trainer can be any `string`, but the members of the `pokemon` array have to be names from the response of the `GET /pokemon` endpoint.
-
-To run all checks:
-
-```
-npm run build
-npm run lint
-npm run test
-```
 
 ## Contribute
 
