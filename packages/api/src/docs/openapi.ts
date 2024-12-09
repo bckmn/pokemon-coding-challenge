@@ -14,52 +14,14 @@ const options: swaggerJsdoc.Options = {
     },
     components: {
       schemas: {
-        Evolution: {
-          type: "object",
-          properties: {
-            num: { type: "string" },
-            name: { type: "string" },
-          },
-          required: ["num", "name"],
-        },
         Pokemon: {
           type: "object",
           properties: {
             id: { type: "number" },
-            num: { type: "string" },
             name: { type: "string" },
             img: { type: "string" },
-            type: { 
-              type: "array",
-              items: { type: "string" },
-            },
-            height: { type: "string" },
-            weight: { type: "string" },
-            candy: { type: "string" },
-            candy_count: { type: "number" },
-            egg: { type: "string" },
-            spawn_chance: { type: "number" },
-            avg_spawns: { type: "number" },
-            spawn_time: { type: "string" },
-            multipliers: {
-              type: "array",
-              items: { type: "number" },
-              nullable: true,
-            },
-            weaknesses: {
-              type: "array",
-              items: { type: "string" },
-            },
-            prev_evolution: {
-              type: "array",
-              items: { $ref: "#/components/schemas/Evolution" },
-            },
-            next_evolution: {
-              type: "array",
-              items: { $ref: "#/components/schemas/Evolution" },
-            },
           },
-          required: ["id", "num", "name", "type", "height", "weight"],
+          required: ["id", "name"],
         },
         Team: {
           type: "object",

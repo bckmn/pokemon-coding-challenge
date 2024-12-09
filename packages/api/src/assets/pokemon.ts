@@ -184,7 +184,7 @@ export type Pokemon = {
 };
 
 export type PokemonResponse = {
-  pokemon: ReadonlyArray<Pokemon>,
+  pokemon: ReadonlyArray<Pick<Pokemon, "id" | "name" | "img">>,
 };
 
 export const pokemon: ReadonlyArray<Pokemon> = [{
