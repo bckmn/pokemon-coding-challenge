@@ -3,7 +3,7 @@ import { expect } from "chai";
 import { Team } from "../types/battle";
 
 import { simulateBattle } from "./battle-mechanics";
-import { PokemonName } from "../assets/pokemon";
+import { PokemonName } from "../assets/pokemon.js";
 
 
 describe("Battle Mechanics", () => {
