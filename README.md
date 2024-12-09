@@ -16,6 +16,8 @@ npm ci
 npm run dev
 ```
 
+Note that the project deliberately uses `eslint@8.49.0` and as such will cause `npm ci` to warn that some package versions are depricated. This is done because I wanted to be able to use YAML for the Eslint config and Eslint 9 no longer supports that. I will have to migrate the config file to `.mjs` in the future.
+
 Visit `http://localhost:{PORT}/api-docs` to interact with the API via an OpenAPI UI.
 
 To run all checks:
@@ -55,6 +57,5 @@ A list of things I would like to improve:
 
   - Add proper error handling of the `/battle` endpoint. Errors should return proper HTTP error codes instead of being added to the battle log.
   - Add a simple GUI for creating your team and picking Pokemon.
-  - Use `tiny-decoders` to decode the data sent to the API.
   - Setup separate, stateless endpoints and let the client store the state of the battle.
   - Refine the tests.
