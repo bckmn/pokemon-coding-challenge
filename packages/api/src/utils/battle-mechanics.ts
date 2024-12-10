@@ -1,4 +1,4 @@
-import { pokemon, type Pokemon } from "../assets/pokemon.js";
+import { pokemon, PokemonName, type Pokemon } from "../assets/pokemon.js";
 import { BattleResult, Team } from "../types/battle.js";
 
 const TYPE_EFFECTIVENESS: Record<string, string[]> = {
@@ -120,6 +120,6 @@ function calculatePokemonStrength(pokemon: Pokemon): number {
   return strength;
 }
 
-function getPokemonByName(name: string): Pokemon | undefined {
+function getPokemonByName(name: PokemonName): Pokemon | undefined {
   return pokemon.find(p => p.name === name);
 }

@@ -16,6 +16,12 @@ npm ci
 npm run dev
 ```
 
+Or using Docker:
+
+```
+docker compose up api --build
+```
+
 Note that the project deliberately uses `eslint@8.49.0` and as such will cause `npm ci` to warn that some package versions are depricated. This is done because I wanted to be able to use YAML for the Eslint config and Eslint 9 no longer supports that. I will have to migrate the config file to `.mjs` in the future.
 
 Visit `http://localhost:{PORT}/api-docs` to interact with the API via an OpenAPI UI.
